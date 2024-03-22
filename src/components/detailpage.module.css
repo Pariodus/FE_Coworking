@@ -1,0 +1,47 @@
+.card1 {
+    /* background-color: #072A56; */
+    display: block;
+    padding: 5px;
+    margin: 53px;
+    width: 80vw;
+    height: 50vh;
+    position: relative;
+    border-radius: 25px;
+    background: linear-gradient(
+      to left,
+      rgba(7,42,86, 0.9),
+      rgba(248,248,248, 0.9)
+    );
+}
+
+.card2 {
+    /* background-color: #FD845B; */
+    display: block;
+    padding: 5px;
+    margin: 53px;
+    width: 80vw;
+    height: 50vh;
+    position: relative;
+    border-radius: 25px;
+    background: linear-gradient(
+      to right,
+      rgba(253, 132, 90, 0.9),
+      rgba(248,248,248, 0.9)
+    );
+}
+
+.card3 {
+    /* background-color: #FFB9B9; */
+    display: block;
+    padding: 5px;
+    margin: 53px;
+    width: 80vw;
+    height: 50vh;
+    position: relative;
+    border-radius: 25px;
+    background: linear-gradient(
+      to right,
+      rgba(255,185,185, 0.9),
+      rgba(248,248,248, 0.9)
+    );
+}
