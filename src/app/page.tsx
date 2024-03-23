@@ -9,7 +9,6 @@ export default function Home() {
     <main className={styles.main}>
       <Banner/>
       <DetailCard/>
-      {/* <Footer/> */}
     </main>
   );
 }

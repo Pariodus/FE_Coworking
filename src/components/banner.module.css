@@ -1,10 +1,9 @@
 .banner{
     display: block;
     padding: 5px;
-    margin: 0;
+    margin: 0px;
     width: 100vw;
     height: 90vh;
-    position: relative;
 }
 
 .bannerText{
@@ -20,26 +19,25 @@
 
 .backgroundtexture {
     background: linear-gradient(
-      to top,
       rgba(255,185,185, 0.7),
       rgba(248,248,248, 0.9)
     );
     background-size: cover;
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     position: absolute;
     z-index: 0;
     top: 0;
     left: 0;
-  }
-
+}
 
 .button{
-    background-color: #ffffff;
+    background-color: #3b365e;
     border-radius: 8px;
-    border-color: #3b365e;
+    border-color: white;
+    border: none;
     box-sizing: border-box;
-    color:black;
+    color:white;
     cursor: pointer;
     display: inline-block;
     font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -62,5 +60,7 @@
 }
 .button:hover,
 .button:focus{
-    background-color: #f79abf;
+    border-color: #3b365e;
+    background-color: white;
+    color:#3b365e
 }

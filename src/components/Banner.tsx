@@ -19,10 +19,10 @@ export default function Banner () {
             <div className={styles.backgroundtexture}></div>
             
             <div className={styles.bannerText}>
-                <h1 className='text-4xl font-medium'>FridayBid</h1>
-                <h3 className='text-2xl font-serif'>Working together is better than apart</h3>
+                <h1 className='text-5xl font-medium m-4'>FridayBid</h1>
+                <h3 className='text-2xl font-medium m-3'>Working together is better than apart</h3>
                 <button className={styles.button}
-                    onClick={(e)=>{e.stopPropagation(); router.push('/coworkingSpace')}}>
+                    onClick={(e)=>{e.stopPropagation(); router.push('/coworkings')}}>
                     CoworkingSpace
                 </button>
             </div>
