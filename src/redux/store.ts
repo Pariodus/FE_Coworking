@@ -13,7 +13,7 @@ const reduxPersistedReducer = persistReducer(persistConfig,rootResucer)
 
 export const store = configureStore({
     reducer: {
-        reduxPersistedReducer
+        cartSlice
     }
 })
 

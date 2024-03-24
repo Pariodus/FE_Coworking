@@ -18,16 +18,15 @@
 }
 
 .itemcontainer{
-    width: 150px;
+    width: 180px;
     text-align: center;
-    padding: 20px;
+    padding: 0px;
     margin-top: auto;
     margin-bottom: auto;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 10pt;
     color: white;
     font-size: 1.2rem;
-    margin-left: 10px;
 }
 
 /* .itemcontainer2{
