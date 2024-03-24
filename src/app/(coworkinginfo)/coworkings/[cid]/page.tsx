@@ -24,7 +24,7 @@ export default async function CoworkingDetailPage({params}:{params:{cid:string}}
                      <div className="text-xl mx-5">openTime - closeTime: { coworkingDetail.data.openTime } - {coworkingDetail.data.closeTime}</div>
                      </div>
                   </div>
-                  <Link href={`/reservations?id=${params.cid}&model=${coworkingDetail.data.model}`}>
+                  <Link href={`/reservations?id=${params.cid}&name=${coworkingDetail.data.name}`}>
                      <button className="block rounded-md bg-rose-400 hover:bg-pink-700 px-3 py-2 text-white shadow-sm">
                         Make Reservation
                      </button>

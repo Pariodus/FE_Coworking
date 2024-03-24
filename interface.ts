@@ -1,4 +1,4 @@
-interface CoworkingItem {
+export interface CoworkingItem {
     _id: string,
     name: string,
     address: string,
@@ -10,9 +10,17 @@ interface CoworkingItem {
     id: string
   }
   
-  interface CoworkingJson {
+export interface CoworkingJson {
     success: boolean,
     count: number,
     pagination: Object,
     data: CoworkingItem[]
-  }
+}
+
+export interface ReservationItem {
+  cardId: string
+  cardName: string
+  numOfDays: number
+  pickupDate: string
+  returnDate: string
+}

@@ -1,7 +1,7 @@
 .menucontainer{
     height: 80px;
-    background-color: #072A56;
-    position: fixed;
+    background-color: green;
+    position: absolute;
     top: 0px;
     left: 0px;
     right: 0px;
