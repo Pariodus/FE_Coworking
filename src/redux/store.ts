@@ -12,9 +12,7 @@ const rootResucer = combineReducers({cartSlice})
 const reduxPersistedReducer = persistReducer(persistConfig,rootResucer)
 
 export const store = configureStore({
-    reducer: {
-        cartSlice
-    }
+    reducer: reduxPersistedReducer
 })
 
 export type RootState = ReturnType<typeof store.getState>

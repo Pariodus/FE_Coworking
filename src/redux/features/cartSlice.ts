@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { ReservationItem } from "../../../interface";
+// import { ReservationItem } from "../../../interface";
 
 type CartState = {
     cardItems: ReservationItem[]
@@ -18,7 +18,8 @@ export const cartSlice = createSlice({
             const remainItems = state.cardItems.filter(obj=>{
                 return((obj.cardName !== action.payload.cardName) 
                         || (obj.pickupDate !== action.payload.pickupDate)
-                        || (obj.returnDate !== action.payload.returnDate));
+                        || (obj.startTime !== action.payload.startTime)
+                        || (obj.endTime !== action.payload.endTime));
             })
             state.cardItems = remainItems
         }

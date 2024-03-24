@@ -1,5 +1,6 @@
 import Link from "next/link";
 import CoworkingCard from "./CoworkingCard";
+// import { CoworkingJson, CoworkingItem } from "../../interface";
 
 export default async function CoworkingCatalog({coJson}: {coJson:Promise<CoworkingJson>}){
     const coJsonReady = await coJson;
@@ -13,7 +14,7 @@ export default async function CoworkingCatalog({coJson}: {coJson:Promise<Coworki
             justifyContent:"space-around", alignContent:"space-around"}}>
                 {
                     coJsonReady.data.map((coItem:CoworkingItem) => (
-                        <Link href={`/coworkings/${coItem.id}`} className="w-1/5 m-10">
+                        <Link href={`/coworkings/${coItem.id}`} className="w-1/5 m-5">
                             <CoworkingCard cardName={coItem.name} imgSrc={coItem.picture}/>
                         </Link>
                     ))

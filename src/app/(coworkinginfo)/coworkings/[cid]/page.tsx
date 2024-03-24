@@ -17,7 +17,7 @@ export default async function CoworkingDetailPage({params}:{params:{cid:string}}
 
                <div className="flex flex-col items-center">
                   <div className="block bg-blue-200 mx-5 my-10 w-[40vw] h-[20vh] rounded-lg">
-                     <div className="mx-5 my-10 text-left">
+                     <div className="mx-5 my-5 text-left">
                      <div className="text-xl mx-5">Name: { coworkingDetail.data.name }</div>
                      <div className="text-xl mx-5">address: { coworkingDetail.data.address }</div>
                      <div className="text-xl mx-5">tel: { coworkingDetail.data.tel }</div>
@@ -31,8 +31,6 @@ export default async function CoworkingDetailPage({params}:{params:{cid:string}}
                </Link>
                </div>
                <hr></hr>
-               
-               
          </div>
       </main>
    )
