@@ -7,7 +7,7 @@ import { useState } from 'react'
 import { useDispatch  } from "react-redux";
 import { AppDispatch } from "@/redux/store";
 import { addReservation } from "@/redux/features/cartSlice";
-// import { ReservationItem } from "../../../interface";
+import { ReservationItem } from "../../../interface";
 
 export default function Reservetions(){
 
@@ -23,8 +23,8 @@ export default function Reservetions(){
                 cardId: cid,
                 cardName: name,
                 pickupDate: dayjs(pickupDate).format("YYYY/MM/DD"),
-                startTime: dayjs(startTime).format("hh:mm:ss"),
-                endTime: dayjs(endTime).format("hh:mm:ss")
+                startTime: dayjs(startTime).format("hh:mm:aa"),
+                endTime: dayjs(endTime).format("hh:mm:aa")
             }
             dispatch(addReservation(item))
         }
@@ -44,10 +44,10 @@ export default function Reservetions(){
                 <DateReserve onDateChange={(value:Dayjs)=>{setPickupDate(value)}}/>
 
                 <div className="text-md text-left text-gray-600 m-3">Start Time</div>
-                <TimeReserve onDateChange={(value:Dayjs)=>{setPickupDate(value)}}/>
+                <TimeReserve onDateChange={(value:Dayjs)=>{setStartTime(value)}}/>
 
                 <div className="text-md text-left text-gray-600 m-3">End Time</div>
-                <TimeReserve onDateChange={(value:Dayjs)=>{setPickupDate(value)}}/>
+                <TimeReserve onDateChange={(value:Dayjs)=>{setEndTime(value)}}/>
             </div>
 
             <button className="block rounded-md bg-rose-400 hover:bg-pink-700 px-3 py-2 text-white shadow-sm"

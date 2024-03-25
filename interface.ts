@@ -17,7 +17,7 @@ interface CoworkingJson {
     data: CoworkingItem[]
 }
 
-interface ReservationItem {
+export interface ReservationItem {
   cardId: string
   cardName: string
   pickupDate: string

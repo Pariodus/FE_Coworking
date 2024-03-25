@@ -13,7 +13,8 @@ export default function TimeReserve({onDateChange}: {onDateChange:Function}){
             <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <TimePicker className="bg-white" 
                 value={reserveTime}
-                onChange={(value)=>{setReserveTime(value); onDateChange(value)}}/>
+                onChange={(value)=>{setReserveTime(value); onDateChange(value)}}
+                />
             </LocalizationProvider>
         </div>
     )

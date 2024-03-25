@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-// import { ReservationItem } from "../../../interface";
+import { ReservationItem } from "../../../interface";
 
 type CartState = {
     cardItems: ReservationItem[]
