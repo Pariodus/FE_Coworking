@@ -7,8 +7,6 @@ export default function ReservationCart(){
     const cardItems = useAppSelector((state) => state.cartSlice.cardItems)
     const dispatch = useDispatch<AppDispatch>()
     
-    console.log(cardItems)
-
     return (
         <>
         {
