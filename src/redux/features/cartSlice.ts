@@ -16,13 +16,17 @@ export const cartSlice = createSlice({
         },
         removeReservation: (state, action:PayloadAction<ReservationItem>)=>{
             const remainItems = state.cardItems.filter(obj=>{
-                return((obj.cardName !== action.payload.cardName) 
-                        || (obj.pickupDate !== action.payload.pickupDate)
-                        || (obj.startTime !== action.payload.startTime)
-                        || (obj.endTime !== action.payload.endTime));
+                return((obj.reserveDate !== action.payload.reserveDate) 
+                        || (obj.reserveDateStart !== action.payload.reserveDateStart)
+                        || (obj.reserveDateEnd !== action.payload.reserveDateEnd)
+                        || (obj.user !== action.payload.user)
+                        || (obj.coworking !== action.payload.coworking));
             })
             state.cardItems = remainItems
-        }
+        },
+        // updateReservation: (state, action:PayloadAction<ReservationItem>)=>{
+        //     const 
+        // }
     }
 })
 

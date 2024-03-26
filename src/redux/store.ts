@@ -8,8 +8,9 @@ const persistConfig = {
     key: "rootPersist",
     storage
 }
+
 const rootResucer = combineReducers({cartSlice})
-const reduxPersistedReducer = persistReducer(persistConfig,rootResucer)
+const reduxPersistedReducer = persistReducer(persistConfig, rootResucer)
 
 export const store = configureStore({
     reducer: reduxPersistedReducer

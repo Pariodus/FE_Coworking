@@ -1,6 +1,6 @@
 import Link from "next/link";
 import CoworkingCard from "./CoworkingCard";
-// import { CoworkingJson, CoworkingItem } from "../../interface";
+import { CoworkingJson, CoworkingItem } from "../../interface";
 
 export default async function CoworkingCatalog({coJson}: {coJson:Promise<CoworkingJson>}){
     const coJsonReady = await coJson;
