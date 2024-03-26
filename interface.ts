@@ -46,3 +46,19 @@ export interface ReserveJson {
   count: number, 
   data: ReservationItem2[]
 }
+
+
+export interface UserItem {
+  _id: string,
+  name: string,
+  email: string,
+  role: string,
+  password: string,
+  createAt: string
+}
+
+export interface UserJson {
+  success: boolean,
+  count: number, 
+  data: UserItem[]
+}
