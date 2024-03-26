@@ -9,17 +9,19 @@ import { AppDispatch } from "@/redux/store";
 import { ReservationItem } from "../../../interface";
 import postReservation from "@/libs/postReservation";
 import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 export default function Reservetions(){
-
+    
+    const router = useRouter()
     const urlParams = useSearchParams()
     const cid = urlParams.get('id')
     const name = urlParams.get('name')
     const {data:session} = useSession()
     const user = session?.user._id
 
-    const dispatch = useDispatch<AppDispatch>()
-    const [hasBooked, setHasBooked] = useState(false)
+    // const dispatch = useDispatch<AppDispatch>()
+    // const [hasBooked, setHasBooked] = useState(false)
 
     const [pickupDate, setPickupDate] = useState<Dayjs|null>(null)
     const [startTime, setStartTime] = useState<Dayjs|null>(null)
@@ -40,7 +42,9 @@ export default function Reservetions(){
             postReservation(session.user.token, item)
                 .then((data) => {
                     console.log(data)
-                    alert("Success")
+                    // alert("Success")
+                    router.push('/cart')
+                    router.refresh()
                 })
                 .catch((err) => {
                     console.log(err.message)

@@ -3,9 +3,9 @@ import { ReservationItem } from "../../interface"
 export default async function postReservation(token: string, reservationItem: any){
     const response = await fetch(`http://localhost:5000/api/v1/coworkings/${reservationItem.coworkingId}/reservations`, {
         method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            "authorization": `Bearer ${token}`
+        headers: {            
+            "authorization": `Bearer ${token}`,
+            "Content-Type": "application/json"
         },
         body: JSON.stringify({
             reserveDateStart: reservationItem.reserveDateStart,

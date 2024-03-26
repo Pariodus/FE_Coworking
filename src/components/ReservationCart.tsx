@@ -2,6 +2,9 @@ import { AppDispatch, useAppSelector } from "@/redux/store"
 import { useDispatch } from "react-redux"
 import { removeReservation } from "@/redux/features/cartSlice"
 import { ReserveJson, ReservationItem2 } from "../../interface"
+import Link from "next/link"
+import deleteReservation from "@/libs/deleteReservation"
+import session from "redux-persist/lib/storage/session"
 
 export default async function ReservationCart({reserveJson}: {reserveJson: Promise<ReserveJson>}){
     
@@ -17,9 +20,19 @@ export default async function ReservationCart({reserveJson}: {reserveJson: Promi
                         <div className="text-sm mx-2">StartTime: {reservationItem.reserveDateStart}</div>
                         <div className="text-sm mx-2">EndTime: {reservationItem.reserveDateEnd}</div>
 
-                        <button className="block rounded-md bg-sky-600 mx-2 hover:bg-indigo-600 px-3 py-2 text-white shadow-sm">
-                            Remove from Cart
-                        </button>
+                        <div className="flex flex-row mt-2">
+                            <Link href={`cart/update?id=${reservationItem._id}`}>
+                                <button className="rounded-md bg-rose-400 mx-2 hover:bg-pink-700 px-3 py-2 text-white shadow-sm">
+                                    Edit
+                                </button>
+                            </Link>
+                        
+                            <Link href={`cart/delete/${reservationItem._id}`}>
+                                <button className="rounded-md bg-orange-400 mx-2 hover:bg-red-700 px-3 py-2 text-white shadow-sm">
+                                    Remove from Cart
+                                </button>
+                            </Link>
+                        </div>
                 </div>
             ))
         }
