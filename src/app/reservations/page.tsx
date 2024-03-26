@@ -42,8 +42,9 @@ export default function Reservetions(){
                     console.log(data)
                     alert("Success")
                 })
-                .catch(err => {
+                .catch((err) => {
                     console.log(err.message)
+                    alert(err.message)
                 })
         }
     }

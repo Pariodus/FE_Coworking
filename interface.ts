@@ -25,12 +25,24 @@ export interface ReservationItem {
   coworking: string
 }
 
-// export interface User{
-//   _id:string,
-//   name:string,
-//   email:string,
-//   telephone: string,
-//   role: string,
-//   password:string,
-//   token: string
-// }
+export interface ReservationItem2 {
+  _id: string,
+  reserveDate: string,
+  reserveDateStart: string,
+  reserveDateEnd: string,
+  user: string
+  coworking: {
+                _id: string
+                name: string
+                tel: string
+                id: string
+              }|null
+  createAt: string
+  __v: string
+}
+
+export interface ReserveJson {
+  success: boolean,
+  count: number, 
+  data: ReservationItem2[]
+}
